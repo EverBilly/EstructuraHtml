@@ -15,7 +15,7 @@ pone el navegador por defecto*/
 }
 .header {
     grid-area: header;
-    background-color: #F8EFBA;
+    background-color: #fd9644;
 }
 .navbar {
     grid-area: navbar;
@@ -23,15 +23,15 @@ pone el navegador por defecto*/
 }
 .aside {
     grid-area: aside;
-    background-color: #8395a7;
+    background-color: #45aaf2;
 }
 .article {
     grid-area: article;
-    background-color: #BDC581;
+    background-color: #0fb9b1;
 }
 .footer {
     grid-area: footer;
-    background-color: #2e86de;
+    background-color: #a5b1c2;
 }
 .container {
     /*Sirve para q los elementos del container se vuelvan
