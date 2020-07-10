@@ -1,0 +1,70 @@
+/* Esto sirve para resetear los margenes que 
+pone el navegador por defecto*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+/*Se utiliza para que el grid abarque el 100% de la pagina*/
+    height: 100%;
+}
+.container > *{
+    box-shadow: 0 0 0 2px #000000;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.header {
+    grid-area: header;
+    background-color: #F8EFBA;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: #0abde3;
+}
+.aside {
+    grid-area: aside;
+    background-color: #8395a7;
+}
+.article {
+    grid-area: article;
+    background-color: #BDC581;
+}
+.footer {
+    grid-area: footer;
+    background-color: #2e86de;
+}
+.container {
+    /*Sirve para q los elementos del container se vuelvan
+    un grid*/
+    display: grid;
+    /*Separacion entre los elementos del grid*/
+    gap: 10px;
+    /*Sirve para asignarle un espacio en el HTML por areas*/
+    grid-template: 
+        "header"
+        "navbar"
+        "aside"
+        "article"
+        "footer";
+}
+/*Se Ejecuta Cuando el ancho de la pagina 
+tenga como minimo 600px*/
+@media(min-width: 600px) {
+     .container {
+         grid-template: 
+         "header header" 100px
+         "navbar navbar" 50px
+         "aside  article" auto
+         "footer footer" 100px /
+         300px   auto;
+     }
+}
+@media(min-width: 900px) {
+    .container {
+        grid-template: 
+        "header header header" 100px
+        "navbar article aside" auto
+        "footer footer  footer" 100px /
+        300px   auto    300px;
+    }
+}
